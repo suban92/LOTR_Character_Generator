@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, Response
 import requests
 
 app = Flask(__name__)
@@ -6,51 +6,51 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def Home():
-    Race = requests.get("http://service-2:5001/Race")
+    Race = requests.get("http://service-5:5004/Race")
     
-    Stature = requests.get("http://service-2:5001/Stature")
+    Stature = requests.get("http://service-5:5004/Stature")
     
-    Location = requests.get("http://service-2:5001/Location")
+    Location = requests.get("http://service-5:5004/Location")
     
-    Rank = requests.get("http://service-2:5001/Rank")
+    Rank = requests.get("http://service-5:5004/Rank")
     
-    Profession = requests.get("http://service-2:5001/Profession")
-    
-    
-    
-    Grade = requests.get("http://service-3:5002/Grade")
-    
-    Weapon = requests.get("http://service-3:5002/Weapon")
-    
-    Stance = requests.get("http://service-3:5002/Stance")
-    
-    Trait_1 = requests.get("http://service-3:5002/Trait_1")
-    
-    Trait_2 = requests.get("http://service-3:5002/Trait_2")
-    
-    Trait_3 = requests.get("http://service-3:5002/Trait_3")
+    Profession = requests.get("http://service-5:5004/Profession")
     
     
     
-    Melee_Prowess = requests.get("http://service-4:5003/Melee_Prowess")
+    Grade = requests.get("http://service-5:5004/Grade")
     
-    Archery_Prowess = requests.get("http://service-4:5003/Archery_Prowess")
+    Weapon = requests.get("http://service-5:5004/Weapon")
     
-    Strength = requests.get("http://service-4:5003/Strength")
+    Stance = requests.get("http://service-5:5004/Stance")
     
-    Endurance = requests.get("http://service-4:5003/Endurance")
+    Trait_1 = requests.get("http://service-5:5004/Trait_1")
     
-    Intelligence = requests.get("http://service-4:5003/Intelligence")
+    Trait_2 = requests.get("http://service-5:5004/Trait_2")
     
-    Awareness = requests.get("http://service-4:5003/Awareness")
+    Trait_3 = requests.get("http://service-5:5004/Trait_3")
     
-    Dexterity = requests.get("http://service-4:5003/Dexterity")
     
-    Dodge = requests.get("http://service-4:5003/Dodge")
     
-    return render_template("Home.html", Race=Race.text, Stature=Stature.text, Location=Location.text, 
-   
-    Rank=Rank.text, Profession=Profession.text, Grade=Grade.text, Weapon=Weapon.text, Stance=Stance.text, 
+    Melee_Prowess = requests.get("http://service-5:5004/Melee_Prowess")
+    
+    Archery_Prowess = requests.get("http://service-5:5004/Archery_Prowess")
+    
+    Strength = requests.get("http://service-5:5004/Strength")
+    
+    Endurance = requests.get("http://service-5:5004/Endurance")
+    
+    Intelligence = requests.get("http://service-5:5004/Intelligence")
+    
+    Awareness = requests.get("http://service-5:5004/Awareness")
+    
+    Dexterity = requests.get("http://service-5:5004/Dexterity")
+    
+    Dodge = requests.get("http://service-5:5004/Dodge")
+    
+    return render_template("Home.html", Race=Race.text, Stature=Stature.text,
+    
+    Location=Location.text, Rank=Rank.text, Profession=Profession.text, Grade=Grade.text, Weapon=Weapon.text, Stance=Stance.text, 
     
     Trait_1=Trait_1.text, Trait_2=Trait_2.text, Trait_3=Trait_3.text, Melee_Prowess=Melee_Prowess.text,
     

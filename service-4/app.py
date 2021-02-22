@@ -16,12 +16,10 @@ def Archery_Prowess():
     return str(Archery_Prowess)
 
 
-
 @app.route("/Strength", methods=["GET"])
 def Strength():
     Strength =(random.randint(0, 10))
     return str(Strength)
-
 
 
 @app.route("/Endurance", methods=["GET"])
@@ -30,13 +28,10 @@ def Endurance():
    return str(Endurance)
 
 
-
-
 @app.route("/Intelligence", methods=["GET"])
 def Intelligence():
     Intelligence =(random.randint(0, 10))
     return str(Intelligence)
-
 
 
 @app.route("/Awareness", methods=["GET"])
@@ -52,20 +47,10 @@ def Dexterity():
     return str(Dexterity)
 
 
-
-
 @app.route("/Dodge", methods=["GET"])
 def Dodge():
     Dodge =(random.randint(0, 10))
     return str(Dodge)
-
-
-
-
-
-
-
-
 
 
 

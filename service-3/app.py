@@ -12,7 +12,7 @@ def Grade():
 
 @app.route("/Weapon", methods=["GET"])
 def Weapon():
-    Weapons = ["Barefist" "Dagger", "ShortSword", "LongSword", "Morning star", "Two-Handed GreatSword" , "Two-Handed BattleAxe","Dual-Wield Daggers", 
+    Weapons = ["Barefist", "Dagger", "ShortSword", "LongSword", "Morning star", "Two-Handed GreatSword" , "Two-Handed BattleAxe","Dual-Wield Daggers", 
     "Dual-Wield Short Axes", "Dual-Wield Short Swords", "Dual-Wield Long Swords", "ShortBow", "Longbow", "Crossbow", "ShortSword And Shield", 
     "LongSword And Shield", "Morning Star And Shield", "Short Axe And Shield", "FoeHammer", "Sting", "Morgul Blade", "Narsil", "Goblin Cleaver" "Andúril"]
     return Response(random.choices(Weapons), mimetype="text/plain")
