@@ -1,5 +1,6 @@
 version: '3.7'
 services:
+  
   service-1:
     container_name: service-1
     build: ./service-1
@@ -8,7 +9,8 @@ services:
       published: 5000
       protocol: tcp
     depends_on: 
-    - "service-2"
+    - "service-5"
+  
   
   service-2:
     container_name: service-2
@@ -17,3 +19,62 @@ services:
     - target: 5001
       published: 5001
       protocol: tcp
+
+
+  service-3:
+    container_name: service-3
+    build: ./service-3
+    ports:
+    - target: 5002
+      published: 5002
+      protocol: tcp
+
+
+  service-4:
+    container_name: service-4
+    build: ./service-4
+    ports:
+    - target: 5003
+      published: 5003
+      protocol: tcp
+
+
+  service-5:
+    container_name: service-5
+    build: ./service-5
+    ports:
+    - target: 5004
+      published: 5004
+      protocol: tcp
+    depends_on: 
+    - "service-2"
+    - "service-3"
+    - "service-4"
+
+
+
+
+
+
+
+
+
+
+
+
+
+# database:
+#     image: mysql:5.7
+#     ports:
+#       - target: 3306
+#         published: 3306
+#     environment:
+#       MYSQL_ROOT_PASSWORD: root
+#       MYSQL_DATABASE: lotr-db
+#     volumes:
+#       - type: volume
+#         source: database-volume
+#         target: /var/lib/mysql
+
+# volumes:
+#   lotr-db-volume:
