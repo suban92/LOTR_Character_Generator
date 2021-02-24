@@ -6,31 +6,31 @@ app = Flask(__name__)
 
 @app.route("/Race", methods=["GET"])
 def Race():
-    Races = ["Orc", "Woodland Elf", "Human", "Dwarf", "Goblin", "High Elf", "Ent", "Hobbit", "Ringwraith", "Uruk-hai"]
-    return Response(random.choices(Races), mimetype="text/plain")
+    Race = ["Orc", "Woodland Elf", "Human", "Dwarf", "Goblin", "High Elf", "Ent", "Hobbit", "Nazgûl", "Uruk-Hai", "Dúnedain"]
+    return Response(random.choices(Race), mimetype="text/plain")
 
 
 @app.route("/Stature", methods=["GET"])
 def Stature():
-    Statures = ["Tiny", "Small", "Average", "Large", "Massive", "Gigantic", "Colossal"]
-    return Response(random.choices(Statures), mimetype="text/plain")
+    Stature = ["Tiny", "Small", "Average", "Large", "Massive", "Gigantic", "Colossal"]
+    return Response(random.choices(Stature), mimetype="text/plain")
     
 
 @app.route("/Location", methods=["GET"])
 def Location():
-    Locations = ["The Shire", "Erebor", "Gondor", "Helm's Deep", "Isengard", "Lothlórien", "Mordor", "Mirkwood", "Rivendell", "Rohan", "Fangorn Forest", "Moria"]
-    return Response(random.choices(Locations), mimetype="text/plain")
+    Location = ["The Shire", "Erebor", "Gondor", "Helm's Deep", "Isengard", "Lothlórien", "Mordor", "Mirkwood", "Rivendell", "Rohan", "Fangorn Forest", "Moria"]
+    return Response(random.choices(Location), mimetype="text/plain")
 
 
 @app.route("/Rank", methods=["GET"])
 def Rank():
-    Ranks = ["Novice", "Apprentice", "Adept", "Master", "Grand-Master"]
-    return Response(random.choices(Ranks), mimetype="text/plain")
+    Rank = ["Novice", "Apprentice", "Adept", "Master", "Grand-Master"]
+    return Response(random.choices(Rank), mimetype="text/plain")
 
-@app.route("/Profession", methods=["GET"])
+@app.route("/Profession", methods=["GET", "POST"])
 def Profession():
-    Professions = ["Berserker", "Knight", "Wizard", "Assassin", "Woodland Archer",]
-    return Response(random.choices(Professions), mimetype="text/plain")
+    Profession = ["FootSoldier","Swordsmen", "Berserker", "Knight", "Wizard", "Assassin", "Ranger", "Druid", "Scout"]
+    return Response(random.choices(Profession), mimetype="text/plain")
 
 
 if __name__ =="__main__":

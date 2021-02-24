@@ -1,9 +1,10 @@
-from flask import Flask, Response
+from flask import Flask, Response, request
 import random 
 import requests
+
 app = Flask(__name__)
 
-
+"""
 # Service-2 Character Imports
 
 @app.route("/Race", methods=["GET"])
@@ -14,29 +15,29 @@ def Race():
 
 
 @app.route("/Stature", methods=["GET"])
-def Stature():
+def Stature(): 
     Stature_Base = requests.get("http://service-2:5001/Stature")
     Stature = (Stature_Base.text)
     return Response(Stature, mimetype="text/plain")
-
+    
 
 @app.route("/Location", methods=["GET"])
-def Location():
+def Location(): 
     Location_Base = requests.get("http://service-2:5001/Location")
     Location = (Location_Base.text)
     return Response(Location, mimetype="text/plain")
-
+    
 
 @app.route("/Rank", methods=["GET"])
 def Rank():
     Rank_Base = requests.get("http://service-2:5001/Rank")
     Rank = (Rank_Base.text)
     return Response(Rank, mimetype="text/plain")
-
+   
 
 @app.route("/Profession", methods=["GET"])
 def Profession():
-    Profession_Base = requests.get("http://service-2:5001/Profession")
+    Profession_Base = requests.get("http://localhost:5001/Profession")
     Profession = (Profession_Base.text)
     return Response(Profession, mimetype="text/plain")
 
@@ -82,16 +83,66 @@ def Trait_3():
     Trait_3_Base = requests.get("http://service-3:5002/Trait_3")
     Trait_3 = (Trait_3_Base.text)
     return Response(Trait_3, mimetype="text/plain")
+"""
 
 # Service-4 Character Imports
 
-@app.route("/Melee_Prowess", methods=["GET"])
+@app.route("/Melee_Prowess", methods=["GET", "POST"])
 def Melee_Prowess():
-    Melee_Prowess_Base = requests.get("http://service-4:5003/Melee_Prowess")
-    Melee_Prowess = (Melee_Prowess_Base.text)
+    # Request for the Profession Data to perform if statements to modify Values
+    Profession_Response = requests.get("http://localhost:5001/Profession")
+    Profession = (Profession_Response.text)
+    
+    Melee_Prowess_Response = requests.get("http://localhost:5003/Melee_Prowess")
+    Melee_Prowess_String = (Melee_Prowess_Response.text)
+    Melee_Prowess_Int = int(Melee_Prowess_String)
+    
+    if Profession == "FootSoldier":
+        Melee_Prowess_Int += 300
+    
+     
+    elif Profession == "Swordsmen":
+        Melee_Prowess_Int += 600
+    
+   
+    elif Profession == "Berserker":
+        Melee_Prowess_Int += 700
+    
+   
+
+    elif Profession == "Knight":
+        Melee_Prowess_Int += 500
+
+    
+
+    elif Profession == "Wizard":
+        Melee_Prowess_Int -= 400
+
+    
+
+
+    elif Profession == "Assassin":
+        Melee_Prowess_Int += 100
+
+
+
+    elif Profession == "Ranger":
+        Melee_Prowess_Int += 200
+
+
+
+    elif Profession == "Druid":
+        Melee_Prowess_Int -= 800
+
+   
+
+    elif Profession == "Scout":
+        Melee_Prowess_Int += 1000
+         
+    Melee_Prowess = str(Melee_Prowess_Int)
     return Response(Melee_Prowess, mimetype="text/plain")
 
-
+"""
 @app.route("/Archery_Prowess", methods=["GET"])
 def Archery_Prowess():
     Archery_Prowess_Base = requests.get("http://service-4:5003/Archery_Prowess")
@@ -139,26 +190,6 @@ def Dodge():
     return Response(Dodge, mimetype="text/plain")
 
 
-
-
-
-
-
-
-
-
-#if Profession == Berserker:
-    #Dexterity = requests.get(("http://service-4:5003/Dexterity") + 100)
-
-
-
-
-
-
-
-
-
-
-
+"""
 if __name__ =="__main__":
     app.run(debug=True, host ="0.0.0.0", port=5004)
