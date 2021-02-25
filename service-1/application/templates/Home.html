@@ -2,7 +2,25 @@
 
 <html>
     <body background="{{ Background }}">
+        
+        <form style="color:white" method ="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <center><legend>Map Creation</legend></center>
+                <br>
+                <div style= class="form-group">
+                    {{ form.name.label(class="form-control-label") }}
+                    {{ form.name(class="form-control form-control-lg") }}
+                    <br>
+                </div>
+            </fieldset>
+            <center><div class="form-group"></center>
+                {{ form.submit(class="btn btn-outline-info") }}
+                </div>
+        </form>
 
+
+        
         <center><h1>{{ Stature }} {{ Race }} From {{ Location }}</h1></center>
         <center><h1>{{ Rank }} {{ Profession }}</h1></center>
         
