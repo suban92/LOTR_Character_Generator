@@ -1,5 +1,5 @@
-from flask import Flask, render_template, Response, request
-from application import app
+from flask import Flask, render_template, Response, request, redirect, url_for
+from application import app, db
 from application.forms import Character_Form
 from application.models import lotr_character
 import requests
@@ -43,28 +43,30 @@ def Home():
     Awareness = requests.post("http://service-5:5004/Awareness", data=Profession.text)
     Dexterity = requests.post("http://service-5:5004/Dexterity", data=Profession.text)
     Dodge = requests.post("http://service-5:5004/Dodge", data=Profession.text)   
+    
+  
 
     # Form to add data into the sql database
     form = Character_Form()
     if form.validate_on_submit():
-        character_new = lotr_character( 
+        character_stats = lotr_character(
         name=form.name.data,
-        race=race, stature=stature,
-        location=location, rank=rank,
-        profession=profession, 
-        grade=grade, weapon=weapon,
-        stance=stance, trait_1=trait_1,
-        trait_2=trait_2, trait_3=trait_3,
-        melee_prowess=melee_prowess,
-        archery_prowess=archery_prowess,
-        strength=strength, endurance=endurance,
-        intelligence=intelligence, awareness=awareness,
-        dexterity=dexterity, dodge=dodge)  
+        race=Race.text, stature=Stature.text,
+        location=Location.text, rank=Rank.text,
+        profession=Profession.text, 
+        grade=Grade.text, weapon=Weapon.text,
+        stance=Stance.text, trait_1=Trait_1.text,
+        trait_2=Trait_2.text, trait_3=Trait_3.text,
+        melee_prowess=Melee_Prowess.text,
+        archery_prowess=Archery_Prowess.text,
+        strength=Strength.text, endurance=Endurance.text,
+        intelligence=Intelligence.text, awareness=Awareness.text,
+        dexterity=Dexterity.text, dodge=Dodge.text)
         
-
-        db.session.add(character_new)
+        db.session.add(character_stats)
         db.session.commit()
         return redirect(url_for("Home"))
+    
 
 
     # Returns all the python variables to the html template

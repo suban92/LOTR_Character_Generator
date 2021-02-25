@@ -22,13 +22,13 @@ class lotr_character(db.Model):
     trait_3 = db.Column(db.String(25), nullable=False)
 
     # Thrid set of objects from service-5 
-    melee_prowess = db.Column(db.Integer, nullable=False)
-    archery_prowess = db.Column(db.Integer, nullable=False)
-    strength = db.Column(db.Integer, nullable=False)
-    endurance = db.Column(db.Integer, nullable=False)
-    intelligence = db.Column(db.Integer, nullable=False)
-    awareness = db.Column(db.Integer, nullable=False)
-    dexterity = db.Column(db.Integer, nullable=False)
-    dodge = db.Column(db.Integer, nullable=False)
+    melee_prowess = db.Column(db.String(22), nullable=False)
+    archery_prowess = db.Column(db.String(2), nullable=False)
+    strength = db.Column(db.String(2), nullable=False)
+    endurance = db.Column(db.String(2), nullable=False)
+    intelligence = db.Column(db.String(2), nullable=False)
+    awareness = db.Column(db.String(2), nullable=False)
+    dexterity = db.Column(db.String(2), nullable=False)
+    dodge = db.Column(db.String(2), nullable=False)
 
     

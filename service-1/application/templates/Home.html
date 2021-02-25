@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 
 <html>
-    <body background="{{ Background }}">
+    <head>
+    
         
         <center><form style="color:white" method ="POST" action="">
             {{ form.hidden_tag() }}
@@ -9,7 +10,7 @@
                 <center><legend>Character Name</legend></center>
                 <br>
                 <div style= class="form-group">
-                    {{ form.name.label(class="form-control-label") }}
+                    
                     {{ form.name(class="form-control form-control-lg") }}
                     <br>
                 </div>
@@ -26,9 +27,12 @@
         
     <br>
     <br>
-        
+</head>
 
-        <h2><align="left">{{ Grade }} {{ Weapon }}</align></h2>
+<body background="{{ Background }}">
+
+        <h1><align="left">{{ Grade }} {{ Weapon }}</align></h1>
+        <br>
         <br>
         <h2><align="left">{{ Stance }}</align></h2>
         <br>
@@ -37,7 +41,7 @@
         <h2><align="left">{{ Trait_3 }}</align></h2>
         
         
-        
+     <br>   
      <h2><align="right"> {{ Melee_Prowess }} Melee Combat </align></h2>
      <h2><align="right"> {{ Archery_Prowess }} Ranged Combat </align></h2>
      <h2><align="right"> {{ Strength }} Strength </align></h2>
@@ -45,7 +49,7 @@
      <h2><align="right"> {{ Intelligence }} Intelligence </align></h2>
      <h2><align="right"> {{ Awareness }} Awareness  </align></h2>
      <h2><align="right"> {{ Dexterity }} Dexterity </align></h2>
-     <h2><align="right"> {{ Dodge }} Dodge </align></h2-->
+     <h2 text_align="right"> {{ Dodge }} Dodge </h2> 
      
 
         
