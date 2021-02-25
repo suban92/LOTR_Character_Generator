@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/Melee_Prowess", methods=["GET","POST"])
 def Melee_Prowess():
-    Melee_Prowess =(random.randint(0, 1))
+    Melee_Prowess =(random.randint(0, 10))
     return str(Melee_Prowess)
 
 

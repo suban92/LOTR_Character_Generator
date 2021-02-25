@@ -6,13 +6,13 @@ app = Flask(__name__)
 
 @app.route("/Race", methods=["GET"])
 def Race():
-    Race = ["Orc", "Woodland Elf", "Human", "Dwarf", "Goblin", "High Elf", "Ent", "Hobbit", "Nazgûl", "Uruk-Hai", "Dúnedain"]
+    Race = ["Orc", "Woodland Elf", "Human", "Dwarf", "Goblin", "High Elf", "Ent", "Hobbit", "Nazgûl", "Uruk-Hai", "Dúnedain", "Orge", "Troll", "Ghost Pirate"]
     return Response(random.choices(Race), mimetype="text/plain")
 
 
 @app.route("/Stature", methods=["GET"])
 def Stature():
-    Stature = ["Tiny", "Small", "Average", "Large", "Massive", "Gigantic", "Colossal"]
+    Stature = ["Tiny", "Small", "Average", "Large", "Massive", "Gigantic", "Colossal", "Stocky"]
     return Response(random.choices(Stature), mimetype="text/plain")
     
 
@@ -24,12 +24,12 @@ def Location():
 
 @app.route("/Rank", methods=["GET"])
 def Rank():
-    Rank = ["Novice", "Apprentice", "Adept", "Master", "Grand-Master"]
+    Rank = ["Novice", "Apprentice","Journeyman", "Adept", "Master", "Grand-Master"]
     return Response(random.choices(Rank), mimetype="text/plain")
 
-@app.route("/Profession", methods=["GET", "POST"])
+@app.route("/Profession", methods=["GET"])
 def Profession():
-    Profession = ["FootSoldier","Swordsmen", "Berserker", "Knight", "Wizard", "Assassin", "Ranger", "Druid", "Scout"]
+    Profession = ["FootSoldier","Duelist", "Berserker", "Knight", "Wizard", "Assassin", "Ranger", "Druid", "Scout", "Raider", "Mercenary"]
     return Response(random.choices(Profession), mimetype="text/plain")
 
 
