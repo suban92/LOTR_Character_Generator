@@ -3,10 +3,10 @@
 <html>
     <body background="{{ Background }}">
         
-        <form style="color:white" method ="POST" action="">
+        <center><form style="color:white" method ="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
-                <center><legend>Map Creation</legend></center>
+                <center><legend>Character Name</legend></center>
                 <br>
                 <div style= class="form-group">
                     {{ form.name.label(class="form-control-label") }}
@@ -17,7 +17,7 @@
             <center><div class="form-group"></center>
                 {{ form.submit(class="btn btn-outline-info") }}
                 </div>
-        </form>
+        </form></center>
 
 
         

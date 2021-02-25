@@ -2,7 +2,6 @@ from application import app
 from flask import Flask, Response
 import random 
 import requests
-app = Flask(__name__)
 
 
 @app.route("/Melee_Prowess", methods=["GET","POST"])

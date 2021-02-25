@@ -1,7 +1,7 @@
 from application import db
 
 
-class character(db.Model):
+class lotr_character(db.Model):
 	# ID and character name
     id = db.Column(db.Integer, primary_key=True,autoincrement=True)
     name = db.Column(db.String(25), unique=True, nullable=False)

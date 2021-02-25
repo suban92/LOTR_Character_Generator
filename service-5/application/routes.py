@@ -353,7 +353,7 @@ def Dexterity():
     elif Profession == "Mercenary":
        Dexterity_Int += 1000
          
-    Dexterity= str(Dexterity_Int)
+    Dexterity = str(Dexterity_Int)
     return Response(Dexterity, mimetype="text/plain")
 
 @app.route("/Dodge", methods=["GET", "POST"])

@@ -1,4 +1,7 @@
 from flask import Flask, render_template, Response, request
+from application import app
+from application.forms import Character_Form
+from application.models import lotr_character
 import requests
 import os 
 
@@ -9,8 +12,8 @@ app.config["UPLOAD_FOLDER"] = PicFolder
 
 
 # Setting the Homepage for my Service
-@app.route('/')
-@app.route('/Home',methods=["GET"])
+@app.route('/', methods=["POST"])
+@app.route('/Home',methods=["GET","POST"])
 def Home():
     Background = os.path.join(app.config["UPLOAD_FOLDER"],"LOTR_Background.jpg")
    
@@ -44,7 +47,7 @@ def Home():
     # Form to add data into the sql database
     form = Character_Form()
     if form.validate_on_submit():
-        character_new = character( 
+        character_new = lotr_character( 
         name=form.name.data,
         race=race, stature=stature,
         location=location, rank=rank,

@@ -1,4 +1,5 @@
-from application import routes
-from flask import Flask, request
-import requests
+from flask import Flask
+
+app = Flask(__name__)
+
 from application import routes
