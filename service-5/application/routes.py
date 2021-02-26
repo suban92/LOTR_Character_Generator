@@ -4,8 +4,8 @@ import random
 import requests
 
 
-# Service-3 Character Imports
 
+# Service-3 Object Imports
 @app.route("/Grade", methods=["GET", "POST"])
 def Grade():
     Weapon = request.data.decode('utf-8')
@@ -34,7 +34,6 @@ def Grade():
 
 
 # Service-4 Character Imports
-
 @app.route("/Melee_Prowess", methods=["GET", "POST"])
 def Melee_Prowess():
     # Request for the Profession Data to perform if statements to modify Values
@@ -45,37 +44,37 @@ def Melee_Prowess():
     Melee_Prowess_Int = int(Melee_Prowess_String)
     
     if Profession == "FootSoldier":
-        Melee_Prowess_Int += 300
+        Melee_Prowess_Int += 3
     
     elif Profession == "Duelist":
-        Melee_Prowess_Int += 600
+        Melee_Prowess_Int += 5
     
     elif Profession == "Berserker":
-        Melee_Prowess_Int += 700
+        Melee_Prowess_Int += 8
     
     elif Profession == "Knight":
-        Melee_Prowess_Int += 500
+        Melee_Prowess_Int += 6
 
     elif Profession == "Wizard":
-        Melee_Prowess_Int -= 400
+        Melee_Prowess_Int -= 5
 
     elif Profession == "Assassin":
-        Melee_Prowess_Int += 100
+        Melee_Prowess_Int += 4
 
     elif Profession == "Ranger":
-        Melee_Prowess_Int += 200
+        Melee_Prowess_Int += 2
 
     elif Profession == "Druid":
-        Melee_Prowess_Int -= 800
+        Melee_Prowess_Int -= 6
     
     elif Profession == "Scout":
-        Melee_Prowess_Int += 1000
+        Melee_Prowess_Int += 1
 
     elif Profession == "Raider":
-        Melee_Prowess_Int += 1000
+        Melee_Prowess_Int += 6
 
     elif Profession == "Mercenary":
-        Melee_Prowess_Int += 1000
+        Melee_Prowess_Int += 7
          
     Melee_Prowess = str(Melee_Prowess_Int)
     return Response(Melee_Prowess, mimetype="text/plain")
@@ -91,37 +90,37 @@ def Archery_Prowess():
     Archery_Prowess_Int = int(Archery_Prowess_String)
 
     if Profession == "FootSoldier":
-        Archery_Prowess_Int += 300
+        Archery_Prowess_Int += 2
     
     elif Profession == "Duelist":
-        Archery_Prowess_Int += 600
+        Archery_Prowess_Int -= 3 
     
     elif Profession == "Berserker":
-        Archery_Prowess_Int += 700
+        Archery_Prowess_Int -= 5
     
     elif Profession == "Knight":
-        Archery_Prowess_Int += 500
+        Archery_Prowess_Int += 1
 
     elif Profession == "Wizard":
-        Archery_Prowess_Int -= 400
+        Archery_Prowess_Int -= 6
 
     elif Profession == "Assassin":
-        Archery_Prowess_Int += 100
+        Archery_Prowess_Int += 4
 
     elif Profession == "Ranger":
-        Archery_Prowess_Int += 200
+        Archery_Prowess_Int += 8
 
     elif Profession == "Druid":
-        Archery_Prowess_Int -= 800
+        Archery_Prowess_Int -= 4
     
     elif Profession == "Scout":
-        Archery_Prowess_Int += 1000
+        Archery_Prowess_Int += 6
 
     elif Profession == "Raider":
-        Archery_Prowess_Int += 1000
+        Archery_Prowess_Int += 4
 
     elif Profession == "Mercenary":
-        Archery_Prowess_Int += 1000
+        Archery_Prowess_Int += 6
          
     Archery_Prowess = str(Archery_Prowess_Int)
     return Response(Archery_Prowess, mimetype="text/plain")
@@ -137,37 +136,37 @@ def Strength():
     Strength_Int = int(Strength_String)
 
     if Profession == "FootSoldier":
-        Strength_Int += 300
+        Strength_Int += 3
     
     elif Profession == "Duelist":
-        Strength_Int += 600
+        Strength_Int += 5
     
     elif Profession == "Berserker":
-        Strength_Int += 700
+        Strength_Int += 8
     
     elif Profession == "Knight":
-        Strength_Int += 500
+        Strength_Int += 5
 
     elif Profession == "Wizard":
-        Strength_Int -= 400
+        Strength_Int -= 4
 
     elif Profession == "Assassin":
-        Strength_Int += 100
+        Strength_Int -= 2
 
     elif Profession == "Ranger":
-        Strength_Int += 200
+        Strength_Int += 1
 
     elif Profession == "Druid":
-        Strength_Int -= 800
+        Strength_Int -= 6
     
     elif Profession == "Scout":
-        Strength_Int += 1000
+        Strength_Int -= 2
 
     elif Profession == "Raider":
-        Strength_Int += 1000
+        Strength_Int += 6
 
     elif Profession == "Mercenary":
-        Strength_Int += 1000
+        Strength_Int += 7
          
     Strength = str(Strength_Int)
     return Response(Strength, mimetype="text/plain")
@@ -183,37 +182,37 @@ def Endurance():
     Endurance_Int = int(Endurance_String)
 
     if Profession == "FootSoldier":
-        Endurance_Int += 300
+        Endurance_Int += 3
     
     elif Profession == "Duelist":
-        Endurance_Int += 600
+        Endurance_Int += 5
     
     elif Profession == "Berserker":
-        Endurance_Int += 700
+        Endurance_Int += 10
     
     elif Profession == "Knight":
-        Endurance_Int += 500
+        Endurance_Int += 6
 
     elif Profession == "Wizard":
-        Endurance_Int -= 400
+        Endurance_Int -= 5
 
     elif Profession == "Assassin":
-        Endurance_Int += 100
+        Endurance_Int += 2
 
     elif Profession == "Ranger":
-        Endurance_Int += 200
+        Endurance_Int += 4
 
     elif Profession == "Druid":
-        Endurance_Int -= 800
+        Endurance_Int -= 7
     
     elif Profession == "Scout":
-        Endurance_Int += 1000
+        Endurance_Int += 4
 
     elif Profession == "Raider":
-        Endurance_Int += 1000
+        Endurance_Int += 6
 
     elif Profession == "Mercenary":
-        Endurance_Int += 1000
+        Endurance_Int += 7
          
     Endurance = str(Endurance_Int)
     return Response(Endurance, mimetype="text/plain")
@@ -229,37 +228,37 @@ def Intelligence():
     Intelligence_Int = int(Intelligence_String)
 
     if Profession == "FootSoldier":
-        Intelligence_Int += 300
+        Intelligence_Int -= 4 
     
     elif Profession == "Duelist":
-        Intelligence_Int += 600
+        Intelligence_Int -= 2
     
     elif Profession == "Berserker":
-        Intelligence_Int += 700
+        Intelligence_Int -= 6 
     
     elif Profession == "Knight":
-        Intelligence_Int += 500
+        Intelligence_Int -= 2 
 
     elif Profession == "Wizard":
-        Intelligence_Int -= 400
+        Intelligence_Int += 8
 
     elif Profession == "Assassin":
-        Intelligence_Int += 100
+        Intelligence_Int += 4
 
     elif Profession == "Ranger":
-        Intelligence_Int += 200
+        Intelligence_Int += 4
 
     elif Profession == "Druid":
-        Intelligence_Int -= 800
+        Intelligence_Int += 10
     
     elif Profession == "Scout":
-        Intelligence_Int += 1000
+        Intelligence_Int += 3
 
     elif Profession == "Raider":
-         Intelligence_Int += 1000
+         Intelligence_Int -= 1
     
     elif Profession == "Mercenary":
-         Intelligence_Int += 1000
+         Intelligence_Int += 5
          
     Intelligence= str(Intelligence_Int)
     return Response(Intelligence, mimetype="text/plain")
@@ -275,37 +274,37 @@ def Awareness():
     Awareness_Int = int(Awareness_String)
 
     if Profession == "FootSoldier":
-        Awareness_Int += 300
+        Awareness_Int += 1
     
     elif Profession == "Duelist":
-        Awareness_Int += 600
+        Awareness_Int += 4
     
     elif Profession == "Berserker":
-        Awareness_Int += 700
+        Awareness_Int += 1
     
     elif Profession == "Knight":
-        Awareness_Int += 500
+        Awareness_Int += 3
 
     elif Profession == "Wizard":
-        Awareness_Int -= 400
+        Awareness_Int += 10
 
     elif Profession == "Assassin":
-        Awareness_Int += 100
+        Awareness_Int += 8
 
     elif Profession == "Ranger":
-        Awareness_Int += 200
+        Awareness_Int += 6
 
     elif Profession == "Druid":
-        Awareness_Int -= 800
+        Awareness_Int += 7
     
     elif Profession == "Scout":
-        Awareness_Int += 1000
+        Awareness_Int += 10
 
     elif Profession == "Raider":
-         Awareness_Int += 1000
+         Awareness_Int += 3
 
     elif Profession == "Mercenary":
-         Awareness_Int += 1000
+         Awareness_Int += 7
          
     Awareness= str(Awareness_Int)
     return Response(Awareness, mimetype="text/plain")
@@ -321,40 +320,42 @@ def Dexterity():
     Dexterity_Int = int(Dexterity_String)
 
     if Profession == "FootSoldier":
-        Dexterity_Int += 300
+        Dexterity_Int += 2
     
     elif Profession == "Duelist":
-        Dexterity_Int += 600
+        Dexterity_Int += 7
     
     elif Profession == "Berserker":
-        Dexterity_Int += 700
+        Dexterity_Int += 3
     
     elif Profession == "Knight":
-        Dexterity_Int += 500
+        Dexterity_Int += 4
 
     elif Profession == "Wizard":
-        Dexterity_Int -= 400
+        Dexterity_Int -= 5
 
     elif Profession == "Assassin":
-        Dexterity_Int += 100
+        Dexterity_Int += 8
 
     elif Profession == "Ranger":
-        Dexterity_Int += 200
+        Dexterity_Int += 9
 
     elif Profession == "Druid":
-        Dexterity_Int -= 800
+        Dexterity_Int -= 7
     
     elif Profession == "Scout":
-        Dexterity_Int += 1000
+        Dexterity_Int += 5
     
     elif Profession == "Raider":
-       Dexterity_Int += 1000
+       Dexterity_Int += 4
 
     elif Profession == "Mercenary":
-       Dexterity_Int += 1000
+       Dexterity_Int += 6
          
     Dexterity = str(Dexterity_Int)
     return Response(Dexterity, mimetype="text/plain")
+
+
 
 @app.route("/Dodge", methods=["GET", "POST"])
 def Dodge():
@@ -365,37 +366,37 @@ def Dodge():
     Dodge_Int = int(Dodge_String)
 
     if Profession == "FootSoldier":
-        Dodge_Int += 300
+        Dodge_Int += 1
     
     elif Profession == "Duelist":
-        Dodge_Int += 600
+        Dodge_Int += 4
     
     elif Profession == "Berserker":
-        Dodge_Int += 700
+        Dodge_Int -= 6
     
     elif Profession == "Knight":
-        Dodge_Int += 500
+        Dodge_Int += 2
 
     elif Profession == "Wizard":
-        Dodge_Int -= 400
+        Dodge_Int -= 5
 
     elif Profession == "Assassin":
-        Dodge_Int += 100
+        Dodge_Int += 10
 
     elif Profession == "Ranger":
-        Dodge_Int += 200
+        Dodge_Int += 8
 
     elif Profession == "Druid":
-        Dodge_Int -= 800
+        Dodge_Int -= 7
     
     elif Profession == "Scout":
-        Dodge_Int += 1000
+        Dodge_Int += 6
 
     elif Profession == "Raider":
-        Dodge_Int += 1000
+        Dodge_Int += 4
 
     elif Profession == "Mercenary":
-        Dodge_Int += 1000
+        Dodge_Int += 7
          
     Dodge = str(Dodge_Int)
     return Response(Dodge, mimetype="text/plain")

@@ -12,7 +12,7 @@ app.config["UPLOAD_FOLDER"] = PicFolder
 
 
 # Setting the Homepage for my Service
-@app.route('/', methods=["POST"])
+@app.route('/', methods=["GET","POST"])
 @app.route('/Home',methods=["GET","POST"])
 def Home():
     Background = os.path.join(app.config["UPLOAD_FOLDER"],"LOTR_Background.jpg")
@@ -27,11 +27,11 @@ def Home():
    
     # Requesting the second set of semi-modified objects from service-3
     Weapon = requests.get("http://service-3:5002/Weapon")
-    Grade = requests.post("http://service-5:5004/Grade", data=Weapon.text)
     Stance = requests.get("http://service-3:5002/Stance")
     Trait_1 = requests.get("http://service-3:5002/Trait_1")
     Trait_2 = requests.get("http://service-3:5002/Trait_2")
     Trait_3 = requests.get("http://service-3:5002/Trait_3")
+    Grade = requests.post("http://service-5:5004/Grade", data=Weapon.text)
 
 
     # Requesting last set modified objects from service-5 
@@ -65,9 +65,8 @@ def Home():
         
         db.session.add(character_stats)
         db.session.commit()
-        return redirect(url_for("Home"))
+        
     
-
 
     # Returns all the python variables to the html template
     return render_template("Home.html",Background=Background, form=form,
