@@ -16,7 +16,7 @@ app.config["UPLOAD_FOLDER"] = PicFolder
 @app.route('/Home',methods=["GET","POST"])
 def Home():
     Background = os.path.join(app.config["UPLOAD_FOLDER"],"LOTR_Background.jpg")
-   
+     
    # Requesting the first set of standard objects from service-2
     Race = requests.get("http://service-2:5001/Race")
     Stature = requests.get("http://service-2:5001/Stature")

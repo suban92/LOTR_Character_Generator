@@ -67,14 +67,14 @@ class Test_Service_5_Grade(TestBase):
 
 
 
-    # This test is checking that if "Andúril"(data) and the randomly generated object Grade(g) is not equal to  
+    # This test is checking that if "Anduril"(data) and the randomly generated object Grade(g) is not equal to  
     # Eleven Mastercrafted then the function will make the outputting Grade equal to Eleven Mastercrafted which is then posted(p) to service-1.
-    def test_Grade_Andúril(self):
+    def test_Grade_Anduril(self):
         with patch("requests.get") as g:
             g.return_value.text = "Rusty"
             with patch("requests.post") as p:
                  p.return_value.text = "Eleven Mastercrafted"
-                 response = self.client.post(url_for('Grade'),data="Andúril")
+                 response = self.client.post(url_for('Grade'),data="Anduril")
                  self.assertIn(b"Eleven Mastercrafted", response.data)
     
 

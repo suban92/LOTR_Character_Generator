@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 
 <html>
-    <body background="{{ Background }}">
-    
+    <head>
         
-        <center><form style="color:white" method ="POST" action="">
+        
+        <center><form style="color:rgb(255, 255, 255)" method ="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
                 <center><legend>Character Name</legend></center>
@@ -17,39 +17,35 @@
             </fieldset>
             <center><div class="form-group"></center>
                 {{ form.submit(class="btn btn-outline-info") }}
-                </div>
+            </div>
         </form></center>
 
-
+        <center><h1 style="color:purple">{{ Stature }} {{ Race }} From {{ Location }}</h2></center>
+        <center><h2 style="color:purple">{{ Rank }} {{ Profession }}</h1></center>
         
-        <center><h1>{{ Stature }} {{ Race }} From {{ Location }}</h1></center>
-        <center><h1>{{ Rank }} {{ Profession }}</h1></center>
-        
-    <br>
     <br>
 </head>
+<body background="{{ Background }}"></body>
 
-<body>
-
-        <h1><align="left">{{ Grade }} {{ Weapon }}</align></h1>
+<center><h2 style="color:salmon">{{ Grade }} {{ Weapon }}</h2></center>
         <br>
         <br>
-        <h2><align="left">{{ Stance }}</align></h2>
+        <center><h2 style="color:gold">{{ Stance }}</h3></center>
         <br>
-        <h2><align="left">{{ Trait_1 }}</align></h2>
-        <h2><align="left">{{ Trait_2 }}</align></h2>
-        <h2><align="left">{{ Trait_3 }}</align></h2>
+        <center><h2 style="color:gold">{{ Trait_1 }}</align></h3></center>
+        <center><h2 style="color:gold">{{ Trait_2 }}</h3></center>
+        <center><h2 style="color:gold">{{ Trait_3 }}</h3></center>
         
         
      <br>   
-     <h2><align="right">{{ Melee_Prowess }} Melee Combat</align></h2>
-     <h2><align="right"> {{ Archery_Prowess }} Ranged Combat </align></h2>
-     <h2><align="right"> {{ Strength }} Strength </align></h2>
-     <h2><align="right"> {{ Endurance }} Endurance </align></h2>
-     <h2><align="right"> {{ Intelligence }} Intelligence </align></h2>
-     <h2><align="right"> {{ Awareness }} Awareness  </align></h2>
-     <h2><align="right"> {{ Dexterity }} Dexterity </align></h2>
-     <h2><align="right"> {{ Dodge }} Dodge </align></h2
+     <center><h3 style="color:red">{{ Melee_Prowess }} Melee Combat</h3>
+     <h3 style="color:green">{{ Archery_Prowess }} Ranged Combat</h3>
+     <h3 style="color:red">{{ Strength }} Strength</h3>
+     <h3 style="color:red">{{ Endurance }} Endurance</h3>
+     <h3 style="color:teal">{{ Intelligence }} Intelligence</h3>
+     <h3 style="color:teal">{{ Awareness }} Awareness</h3>
+     <h3 style="color:green">{{ Dexterity }} Dexterity</h3>
+     <h3 style="color:green">{{ Dodge }} Dodge</h3></center>
      
 
         

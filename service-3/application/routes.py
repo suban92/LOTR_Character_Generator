@@ -18,8 +18,8 @@ def Weapon():
     Weapon_List = ["Barefist", "Dagger", "ShortSword", "LongSword", "Morning star", "Two-Handed GreatSword" , "Two-Handed BattleAxe","Dual-Wield Daggers", 
     "Dual-Wield Short Axes", "Dual-Wield Short Swords", "Dual-Wield Long Swords", "ShortBow", "Longbow", "Crossbow", "Cavalry Bow", "ShortSword And Shield", 
     "LongSword And Shield", "Morning Star And Shield" "Polearm", "Warhammer","Spiked Fist", "Short Axe And Shield", "Elfen Sabre", "Falchion", "FoeHammer", 
-    "Sting", "Morgul Blade", "Narsil", "Goblin Cleaver", "Andúril"]
-    Weapon = Weapon_List[random.randrange(0,30)]
+    "Sting", "Morgul Blade", "Narsil", "Goblin Cleaver", "Anduril"]
+    Weapon = Weapon_List[random.randrange(0,29)]
     return Response(Weapon,mimetype='text/plain')
 
 
@@ -52,7 +52,7 @@ def Trait_2():
 
 @app.route("/Trait_3", methods=["GET"])
 def Trait_3():
-    Trait_3_List = ["Natural Sprinter", "Low Stamina", "Unending Stamina", "Grand-Master Strategist", "Weak", "Stonks", "Paranoid", "Heronic", "Anemic",
+    Trait_3_List = ["Natural Sprinter", "Low Stamina", "Unending Stamina", "Grand-Master Strategist", "Weak", "Stonks", "Paranoid", "Heroic", "Anemic",
     "Grumpy","Lazy", "Confused", "Drunk", "Troubled", "Damaged", "Snapped Up", "Hench"]
     Trait_3 = Trait_3_List[random.randrange(0,17)]
     return Response(Trait_3,mimetype='text/plain')

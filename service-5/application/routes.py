@@ -25,7 +25,7 @@ def Grade():
     elif Weapon == "Goblin Cleaver":
         Grade_String = "Eleven Mastercrafted"
 
-    elif Weapon == "Andúril":
+    elif Weapon == "Anduril":
         Grade_String = "Eleven Mastercrafted"
 
     Grade = Grade_String
