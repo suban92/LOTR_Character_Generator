@@ -13,6 +13,9 @@ cd LOTR_Character_Generator
 # remove any previous services 
 sudo docker stack rm lotr
 
+#log into dockerhub account
+sudo docker login
 
-# Depploy our services in swarm as a stack with the name lotr
+
+# Deploy our services in swarm as a stack with the name lotr
 sudo docker stack deploy --compose-file docker-compose.yaml lotr
