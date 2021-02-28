@@ -8,7 +8,7 @@ sudo pip3 install --upgrade pip
 
 cd ./service-1
 pip3 install -r requirements.txt
-python3 -m pytest --cov application > test_results-1.txt
+python3 -m pytest --cov application
 mv test_results-1.txt ..
 cd ..
 
@@ -16,7 +16,7 @@ cd ..
 
 # test servcie-2
 cd ./service-2
-python3 -m pytest --cov application > test_results-2.txt
+python3 -m pytest --cov application
 mv test_results-2.txt ..
 cd ..
 
@@ -24,7 +24,7 @@ cd ..
 
 # test servcie-3
 cd ./service-3
-python3 -m pytest --cov application > test_results-3.txt
+python3 -m pytest --cov application
 mv test_results-3.txt ..
 cd ..
 
@@ -32,7 +32,7 @@ cd ..
 
 # test servcie-4
 cd ./service-4
-python3 -m pytest --cov application > test_results-4.txt
+python3 -m pytest --cov application
 mv test_results-4.txt ..
 cd ..
 
@@ -40,13 +40,6 @@ cd ..
 
 # test servcie-5
 cd ./service-5
-python3 -m pytest --cov application > test_results-5.txt
+python3 -m pytest --cov application
 mv test_results-5.txt ..
 cd ..
-
-sudo echo test_results-1 > test_results_total 
-sudo echo test_results-2 >> test_results_total
-sudo echo test_results-3 >> test_results_total
-sudo echo test_results-4 >> test_results_total
-sudo echo test_results-5 >> test_results_total
-sudo cat test_results_total
