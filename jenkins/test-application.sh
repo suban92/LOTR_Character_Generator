@@ -1,4 +1,8 @@
-# install pytest and flask-testing and test service-1
+# install pip3, pytest and flask-testing and test service-1
+sudo update -y
+sudo update -y
+sudo apt install -y python3-pip
+sudo pip3 install --upgrade pip
 cd ./service-1
 pip3 install -r requirements.txt
 python3 -m pytest --cov application 
