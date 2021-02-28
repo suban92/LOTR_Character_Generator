@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-PicFolder = os.path.join("static","pics")
+PicFolder = os.path.join("static","pics") #
 app.config["UPLOAD_FOLDER"] = PicFolder
 
 def multiline(fn):
