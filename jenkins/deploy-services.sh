@@ -1,6 +1,7 @@
 # ssh to the swarm manager to execute commands
 ssh 10.154.0.12
 
+sudo rm -rf LOTR_Character_Generator
 
 # clone the project repository  
 git clone https://github.com/Dwalker0357/LOTR_Character_Generator
