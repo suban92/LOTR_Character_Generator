@@ -1,7 +1,8 @@
 version: '3.8'
 services:
-  loadbalancer:
+  nginx:
     image: nginx:alpine
+    container_name: nginx
     ports:
     - target: 80
       published: 80
