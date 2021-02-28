@@ -39,7 +39,7 @@ services:
       published: 5001
       protocol: tcp
     deploy:
-      replicas: 2
+       replicas: 2
 
 
 
@@ -51,7 +51,7 @@ services:
       published: 5002
       protocol: tcp
     deploy:
-      replicas: 2
+       replicas: 2
       
   
 
@@ -63,7 +63,7 @@ services:
       published: 5003
       protocol: tcp
     deploy:
-      replicas: 2
+       replicas: 2
 
 
 
@@ -75,7 +75,7 @@ services:
       published: 5004
       protocol: tcp
     deploy:
-      replicas: 2
+       replicas: 2
     
   
   

@@ -44,7 +44,7 @@ def Melee_Prowess():
     Melee_Prowess_Int = int(Melee_Prowess_String)
     
     if Profession == "FootSoldier":
-        Melee_Prowess_Int += 3
+        Melee_Prowess_Int += 999
     
     elif Profession == "Duelist":
         Melee_Prowess_Int += 5
@@ -90,7 +90,7 @@ def Archery_Prowess():
     Archery_Prowess_Int = int(Archery_Prowess_String)
 
     if Profession == "FootSoldier":
-        Archery_Prowess_Int += 2
+        Archery_Prowess_Int += 999
     
     elif Profession == "Duelist":
         Archery_Prowess_Int -= 3 
@@ -136,7 +136,7 @@ def Strength():
     Strength_Int = int(Strength_String)
 
     if Profession == "FootSoldier":
-        Strength_Int += 3
+        Strength_Int += 999
     
     elif Profession == "Duelist":
         Strength_Int += 5
@@ -182,7 +182,7 @@ def Endurance():
     Endurance_Int = int(Endurance_String)
 
     if Profession == "FootSoldier":
-        Endurance_Int += 3
+        Endurance_Int += 999
     
     elif Profession == "Duelist":
         Endurance_Int += 5
@@ -228,7 +228,7 @@ def Intelligence():
     Intelligence_Int = int(Intelligence_String)
 
     if Profession == "FootSoldier":
-        Intelligence_Int -= 4 
+        Intelligence_Int += 999
     
     elif Profession == "Duelist":
         Intelligence_Int -= 2
@@ -274,7 +274,7 @@ def Awareness():
     Awareness_Int = int(Awareness_String)
 
     if Profession == "FootSoldier":
-        Awareness_Int += 1
+        Awareness_Int += 999
     
     elif Profession == "Duelist":
         Awareness_Int += 4
@@ -320,7 +320,7 @@ def Dexterity():
     Dexterity_Int = int(Dexterity_String)
 
     if Profession == "FootSoldier":
-        Dexterity_Int += 2
+        Dexterity_Int += 999
     
     elif Profession == "Duelist":
         Dexterity_Int += 7
@@ -366,7 +366,7 @@ def Dodge():
     Dodge_Int = int(Dodge_String)
 
     if Profession == "FootSoldier":
-        Dodge_Int += 1
+        Dodge_Int += 999
     
     elif Profession == "Duelist":
         Dodge_Int += 4
