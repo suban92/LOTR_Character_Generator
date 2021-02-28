@@ -6,12 +6,16 @@ ssh 10.154.0.12
 git clone https://github.com/Dwalker0357/LOTR_Character_Generator
 
 
+git checkout jenkins 
+
+
 # cd into the project repositroy
 cd LOTR_Character_Generator
 
 
 # remove any previous services 
 sudo docker stack rm lotr
+
 
 #log into dockerhub account
 sudo docker login
