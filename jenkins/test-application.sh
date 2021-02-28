@@ -44,9 +44,9 @@ python3 -m pytest --cov application > test_results-5.txt
 mv test_results-5.txt ..
 cd ..
 
-echo test_results-1 > test_results_total 
-echo test_results-2 >> test_results_total
-echo test_results-3 >> test_results_total
-echo test_results-4 >> test_results_total
-echo test_results-5 >> test_results_total
-cat test_results_total
+sudo echo test_results-1 > test_results_total 
+sudo echo test_results-2 >> test_results_total
+sudo echo test_results-3 >> test_results_total
+sudo echo test_results-4 >> test_results_total
+sudo echo test_results-5 >> test_results_total
+sudo cat test_results_total
