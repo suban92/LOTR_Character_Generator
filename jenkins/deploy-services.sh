@@ -7,11 +7,12 @@ sudo rm -rf LOTR_Character_Generator
 git clone https://github.com/Dwalker0357/LOTR_Character_Generator
 
 
-git checkout jenkins 
-
-
 # cd into the project repositroy
 cd LOTR_Character_Generator
+
+
+
+git checkout Jenkins 
 
 
 # remove any previous services 
