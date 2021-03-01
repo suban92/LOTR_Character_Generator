@@ -1,5 +1,5 @@
 # Remove any previous locally built images 
-docker-compose down --rmi local
+docker-compose down --rmi all
 
 
 # build the images for the services from the docker-compose.yaml
@@ -7,6 +7,7 @@ docker-compose build
 
 
 # log into docker with the account credentials  
+
 sudo docker login 
 
 
