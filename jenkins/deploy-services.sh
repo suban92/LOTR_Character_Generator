@@ -2,8 +2,12 @@
 #! /bin/bash
 ssh 10.154.0.12 << EOF 
 
+sudo docker stack rm lotr 
+
+
 sudo rm -rf LOTR_Character_Generator
-  
+
+    
 git clone https://github.com/Dwalker0357/LOTR_Character_Generator
 
 
