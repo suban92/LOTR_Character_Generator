@@ -25,5 +25,4 @@ git checkout Jenkins
 
 # Deploy our services in swarm as a stack with the name lotr
 sudo docker stack deploy --compose-file docker-compose.yaml lotr
-
 EOF 
