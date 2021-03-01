@@ -1,5 +1,5 @@
 # ssh to the swarm manager to execute commands
-ssh 10.154.0.12
+ssh swarm-master << EOF 
 
 sudo rm -rf LOTR_Character_Generator
 
@@ -25,3 +25,4 @@ sudo docker login
 
 # Deploy our services in swarm as a stack with the name lotr
 sudo docker stack deploy --compose-file docker-compose.yaml lotr
+EOF 
