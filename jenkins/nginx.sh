@@ -10,9 +10,6 @@ git clone https://github.com/Dwalker0357/LOTR_Character_Generator
 cd LOTR_Character_Generator
  
 
-git checkout Jenkins
-
-
 cd nginx
 
 
