@@ -13,7 +13,10 @@ cd LOTR_Character_Generator
 cd nginx
 
 
-sudo docker-compose down --rmi local
+sudo docker stop nginx
+
+
+sudo docker rmi nginx
 
 
 sudo docker-compose up -d
