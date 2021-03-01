@@ -5,6 +5,7 @@ import requests
 
 
 
+
 # Defining a route that will randomly pick a characters Melee_Prowess via a entry from the given list (0-1)
 @app.route("/Melee_Prowess", methods=["GET","POST"])
 def Melee_Prowess():
@@ -39,7 +40,7 @@ def Endurance():
     Endurance = Endurance_List[random.randrange(0,1)]
     return str(Endurance)
 
-
+  
 
 # Defining a route that will randomly pick a characters Intelligence via a entry from the given list (0-1)
 @app.route("/Intelligence", methods=["GET"])
@@ -49,7 +50,7 @@ def Intelligence():
     return str(Intelligence)
 
 
-
+  
 # Defining a route that will randomly pick a characters Awareness via a entry from the given list (0-1)
 @app.route("/Awareness", methods=["GET"])
 def Awareness():
@@ -57,7 +58,7 @@ def Awareness():
     Awareness = Awareness_List[random.randrange(0,1)]
     return str(Awareness)
 
-
+  
 
 # Defining a route that will randomly pick a characters Dexterity via a entry from the given list (0-1)
 @app.route("/Dexterity", methods=["GET"])

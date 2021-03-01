@@ -29,4 +29,5 @@ class Test_Service_1(TestBase):
             with patch("requests.post") as p:
                 p.return_value.text = "Honed"
                 response = self.client.get(url_for("Home"))
+
                 self.assertIn(b"Lightning Fast", response.data)
