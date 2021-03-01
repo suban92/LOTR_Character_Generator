@@ -13,7 +13,7 @@ class TestBase(TestCase):
 
 
 # This test is checking that if a random value(1) is used to select a corresponding entry in a list of strings(Grade)
-# the resulting output will be "Broken" which is the second entry in the list because of pythons zero based indexing 
+# the resulting output will be "Rusty" which is the second entry in the list because of pythons zero based indexing 
 class Test_Service_3(TestBase):
     def test_Grade(self):
         with patch("random.randrange") as r:
