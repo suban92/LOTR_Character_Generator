@@ -20,9 +20,10 @@ sudo docker stack rm lotr
 
 
 #log into dockerhub account
-sudo docker login
+#sudo docker login
 
 
 # Deploy our services in swarm as a stack with the name lotr
 sudo docker stack deploy --compose-file docker-compose.yaml lotr
+
 EOF 
