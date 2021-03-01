@@ -10,13 +10,12 @@ git clone https://github.com/Dwalker0357/LOTR_Character_Generator
 cd LOTR_Character_Generator
  
 
+it checkout Jenkins
+
+
 cd nginx
 
-
-sudo docker stop nginx
-
-
-sudo docker rmi nginx
+sudo docker-compose down --rmi local
 
 
 sudo docker-compose up -d
