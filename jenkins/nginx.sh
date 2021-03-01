@@ -1,5 +1,5 @@
 #!/bin/bash
-ssh 35.197.224.58 << EOF 
+ssh 10.154.0.9 << EOF 
 
 sudo rm LOTR_Character_Generator -rf
 
