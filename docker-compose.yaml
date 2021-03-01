@@ -1,24 +1,6 @@
 version: '3.7'
 services:
 
-  service-6:
-    build: ./service-6
-    image: dwalker0357/service-6
-    ports:
-    - target: 3306
-      published: 3306
-      protocol: tcp
-    deploy:
-      replicas: 2
-    volumes:
-    - type: volume
-      source: lotr-volume
-      target: /var/lib/mysql
-    environment: 
-      MYSQL_ROOT_PASSWORD: root 
-    
-
-
   service-1:
     build: ./service-1
     image: dwalker0357/service-1
@@ -76,8 +58,3 @@ services:
       protocol: tcp
     deploy:
       replicas: 2
-    
-  
-  
-volumes:
-  lotr-volume:
