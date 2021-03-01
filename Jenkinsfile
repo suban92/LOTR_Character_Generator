@@ -1,25 +1,38 @@
 pipeline {
     agent any 
     stages{
-        stage('Test-Application'){
+        stage("Test-Application"){
             steps{
                 sh './jenkins/test-application.sh'
             }
         }
-        stage('Ansible'){
+        
+        
+        stage("Ansible"){
             steps{
                 sh './jenkins/ansible.sh'
             }
         }
-        stage('Build-Images'){
+        
+        
+        stage("Build-Images"){
             steps{
                 sh './jenkins/build-images.sh'
             }
         }
-        stage('Deploy-Services'){
+        
+        
+        stage("Deploy-Services"){
             steps{
                 sh './jenkins/deploy-services.sh'
             }
         }                   
+        
+        
+        stage('Nginx'){
+            steps{
+                sh './jenkins/nginx.sh'
+            }
+        }
     }
 }
