@@ -1,80 +1,60 @@
 version: '3.7'
 services:
-  
+
   service-1:
-    container_name: service-1
     build: ./service-1
+    image: dwalker0357/service-1
     ports:
     - target: 5000
       published: 5000
       protocol: tcp
-    depends_on: 
-    - "service-5"
+    deploy:
+      replicas: 2
   
-  
+
+
   service-2:
-    container_name: service-2
     build: ./service-2
+    image: dwalker0357/service-2
     ports:
     - target: 5001
       published: 5001
       protocol: tcp
+    deploy:
+      replicas: 2
+
 
 
   service-3:
-    container_name: service-3
     build: ./service-3
+    image: dwalker0357/service-3
     ports:
     - target: 5002
       published: 5002
       protocol: tcp
-
+    deploy:
+      replicas: 2
+      
+  
 
   service-4:
-    container_name: service-4
     build: ./service-4
+    image: dwalker0357/service-4
     ports:
     - target: 5003
       published: 5003
       protocol: tcp
+    deploy:
+      replicas: 2
+
 
 
   service-5:
-    container_name: service-5
     build: ./service-5
+    image: dwalker0357/service-5
     ports:
     - target: 5004
       published: 5004
       protocol: tcp
-    depends_on: 
-    - "service-2"
-    - "service-3"
-    - "service-4"
-
-
-
-
-
-
-
-
-
-
-
-
-
-# database:
-#     image: mysql:5.7
-#     ports:
-#       - target: 3306
-#         published: 3306
-#     environment:
-#       MYSQL_ROOT_PASSWORD: root
-#       MYSQL_DATABASE: lotr-db
-#     volumes:
-#       - type: volume
-#         source: database-volume
-#         target: /var/lib/mysql
-
-# volumes:
-#   lotr-db-volume:
+    deploy:
+      replicas: 2

@@ -1,9 +1,10 @@
-from flask import Flask, render_template, Response, request
-import requests
-import os 
+from application import app
 
-app = Flask(__name__)
 
+
+if __name__ == "__main__":
+    app.run(port=5000, debug=True, host='0.0.0.0')
+    
 PicFolder = os.path.join("static","pics") #
 app.config["UPLOAD_FOLDER"] = PicFolder
 
@@ -69,6 +70,7 @@ def Home():
 
 if __name__ =="__main__":
     app.run(debug=True, host ="0.0.0.0")
+
 
 
 
