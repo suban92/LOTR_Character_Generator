@@ -16,7 +16,7 @@ git checkout Jenkins
 
 
 # remove any previous services 
-sudo docker stack rm lotr
+#sudo docker stack rm lotr
 
 
 #log into dockerhub account
