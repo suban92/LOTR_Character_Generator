@@ -6,13 +6,15 @@ from flask_testing import TestCase
 import requests
 
 
+
+# Setting up our parent test class which is itself a child of another class (TestCase)
 class TestBase(TestCase):
     def create_app(self):
         return app
 
 
 
-# This test is checking that if a random value(1) is used to select a corresponding entry in a list of strings(Race)
+# This test is checking that if a random value(0) is used to select a corresponding entry in a list of strings(Race)
 # the resulting output will be "Orc" which is the first entry in the list because of pythons zero based indexing 
 class Test_Service_2(TestBase):
     def test_Race(self):
@@ -23,7 +25,7 @@ class Test_Service_2(TestBase):
 
 
 
-# This test is checking that if a random value(2) is used to select a corresponding entry in a list of strings(Stature)
+# This test is checking that if a random value(0) is used to select a corresponding entry in a list of strings(Stature)
 # the resulting output will be "Tiny" which is the first entry in the list because of pythons zero based indexing 
     def test_Stature(self):
         with patch("random.randrange") as r:
@@ -33,7 +35,7 @@ class Test_Service_2(TestBase):
 
 
 
-# This test is checking that if a random value(3) is used to select a corresponding entry in a list of strings(Location)
+# This test is checking that if a random value(0) is used to select a corresponding entry in a list of strings(Location)
 # the resulting output will be "The Shire" which is the first entry in the list because of pythons zero based indexing 
     def test_Location(self):
         with patch("random.randrange") as r:
@@ -43,7 +45,7 @@ class Test_Service_2(TestBase):
 
 
 
-# This test is checking that if a random value(4) is used to select a corresponding entry in a list of strings(Rank)
+# This test is checking that if a random value(0) is used to select a corresponding entry in a list of strings(Rank)
 # the resulting output will be "Novice" which is the first entry in the list because of pythons zero based indexing 
     def test_Rank(self):
         with patch("random.randrange") as r:
@@ -53,7 +55,7 @@ class Test_Service_2(TestBase):
 
 
 
-# This test is checking that if a random value(10) is used to select a corresponding entry in a list of strings(Profession)
+# This test is checking that if a random value(0) is used to select a corresponding entry in a list of strings(Profession)
 # the resulting output will be "FootSoldier" which is the first entry in the list because of pythons zero based indexing 
     def test_Profession(self):
         with patch("random.randrange") as r:

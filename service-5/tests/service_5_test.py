@@ -7,7 +7,7 @@ import requests
 
 
 
-
+# Setting up our parent test class which is itself a child of another class (TestCase)
 class TestBase(TestCase):
     def create_app(self):
         return app
@@ -84,7 +84,7 @@ class Test_Service_5_Grade(TestBase):
 
 
 # This test is checking that if the profession(p) is equal to "FootSoldier"(data) and the randomly generated 
-# varible Melee_Prowess(g) is 1000 then the result will be 5(b) because FootSoldier += 999
+# varible Melee_Prowess(g) is 1 then the result will be 1000(b) because FootSoldier += 999
 # This updated object data is then posted(p) to service-1
 class Test_Service_5_Melee_Prowess(TestBase):
     def test_Melee_Prowess_FootSoldier(self):
@@ -230,7 +230,7 @@ class Test_Service_5_Melee_Prowess(TestBase):
 
 
 # This test is checking that if the profession(p) is equal to "FootSoldier"(data) and the randomly generated 
-# varible Archery_Prowess(g) is 1000 then the result will be 5(b) because FootSoldier += 999 
+# varible Archery_Prowess(g) is 1 then the result will be 1000(b) because FootSoldier += 999 
 # This updated object data is then posted(p) to service-1
 class Test_Service_5_Archery_Prowess(TestBase):
     def test_Archery_Prowess_FootSoldier(self):
@@ -378,7 +378,7 @@ class Test_Service_5_Archery_Prowess(TestBase):
 
 
 # This test is checking that if the profession(p) is equal to "FootSoldier"(data) and the randomly generated 
-# varible Strength(g) is 1000 then the result will be 4(b) because FootSoldier += 999
+# varible Strength(g) is 1 then the result will be 1000(b) because FootSoldier += 999
 # This updated object data is then posted(p) to service-1
 class Test_Service_5_Strength(TestBase):
     def test_Strength_FootSoldier(self):
@@ -1108,7 +1108,7 @@ class Test_Service_5_Dexterity(TestBase):
 
 
 # This test is checking that if the profession(p) is equal to "FootSoldier"(data) and the randomly generated 
-# varible Dodge(g) is 1 then the result will be 2(b) because FootSoldier += 999 
+# varible Dodge(g) is 1 then the result will be 1000(b) because FootSoldier += 999 
 # This updated object data is then posted(p) to service-1
 class Test_Service_5_Dodge(TestBase):
     def test_Dodge_FootSoldier(self):

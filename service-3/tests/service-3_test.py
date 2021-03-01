@@ -7,12 +7,13 @@ import requests
 
 
 
+# Setting up our parent test class which is itself a child of another class (TestCase)
 class TestBase(TestCase):
     def create_app(self):
         return app
 
 
-# This test is checking that if a random value(1) is used to select a corresponding entry in a list of strings(Grade)
+# This test is checking that if a random value(0) is used to select a corresponding entry in a list of strings(Grade)
 # the resulting output will be "Broken" which is the first entry in the list because of pythons zero based indexing 
 class Test_Service_3(TestBase):
     def test_Grade(self):
@@ -23,7 +24,7 @@ class Test_Service_3(TestBase):
 
 
 
-# This test is checking that if a random value(2) is used to select a corresponding entry in a list of strings(Weapon)
+# This test is checking that if a random value(0) is used to select a corresponding entry in a list of strings(Weapon)
 # the resulting output will be "Barefist" which is the first entry in the list because of pythons zero based indexing 
     def test_Weapon(self):
         with patch("random.randrange") as r:
@@ -33,7 +34,7 @@ class Test_Service_3(TestBase):
 
 
 
-# This test is checking that if a random value(3) is used to select a corresponding entry in a list of strings(Stance)
+# This test is checking that if a random value(0) is used to select a corresponding entry in a list of strings(Stance)
 # the resulting output will be "Clumsy" which is the first entry in the list because of pythons zero based indexing 
     def test_Stance(self):
         with patch("random.randrange") as r:
@@ -43,7 +44,7 @@ class Test_Service_3(TestBase):
 
 
 
-# This test is checking that if a random value(4) is used to select a corresponding entry in a list of strings(Trait_1)
+# This test is checking that if a random value(0) is used to select a corresponding entry in a list of strings(Trait_1)
 # the resulting output will be "Odin Force Disease Resist" first is the secound entry in the list because of pythons zero based indexing 
     def test_Trait_1(self):
         with patch("random.randrange") as r:
@@ -53,7 +54,7 @@ class Test_Service_3(TestBase):
 
 
 
-# This test is checking that if a random value(5) is used to select a corresponding entry in a list of strings(Trait_2)
+# This test is checking that if a random value(0) is used to select a corresponding entry in a list of strings(Trait_2)
 # the resulting output will be "Orc Hater" which is the first entry in the list because of pythons zero based indexing 
     def test_Trait_2(self):
         with patch("random.randrange") as r:
@@ -63,7 +64,7 @@ class Test_Service_3(TestBase):
 
 
 
-# This test is checking that if a random value(15) is used to select a corresponding entry in a list of strings(Trait_3)
+# This test is checking that if a random value(0) is used to select a corresponding entry in a list of strings(Trait_3)
 # the resulting output will be "Natural Sprinter" which is the first entry in the list because of pythons zero based indexing 
     def test_Trait_3(self):
         with patch("random.randrange") as r:

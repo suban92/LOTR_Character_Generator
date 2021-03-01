@@ -46,7 +46,7 @@ def Home():
     
   
 
-    # Form to add data into the sql database
+    # Form to add data into the MYSQL database
     form = Character_Form()
     if form.validate_on_submit():
         character_stats = lotr_character(

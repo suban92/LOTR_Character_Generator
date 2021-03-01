@@ -7,7 +7,7 @@ from flask_testing import TestCase
 import requests
 
 
-
+# Setting up our parent test class which is itself a child of another class (TestCase)
 class TestBase(TestCase):
     def create_app(self):
         app.config.update(SQLALCHEMY_DATABASE_URI="sqlite:///")
@@ -21,7 +21,7 @@ class TestBase(TestCase):
         db.drop_all()
 
 
-# This is test a Get request(g) is being displayed onto my html page(b) while also posting data with a post request(p) to service-5
+# This is testing that a Get request(g) is being displayed onto my html page(b) while also posting data with a post request(p) to service-5
 class Test_Service_1(TestBase):
     def test_Get_And_Post_Requsts(self):
         with patch("requests.get") as g:
