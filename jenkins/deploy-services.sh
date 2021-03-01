@@ -1,4 +1,3 @@
-# ssh to the swarm manager to execute commands
 ssh 10.154.0.12 << EOF 
 
 sudo rm -rf LOTR_Character_Generator
