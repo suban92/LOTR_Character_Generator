@@ -6,7 +6,7 @@ docker-compose down --rmi local
 docker-compose build 
 
 
-# log into docker with our account credentials 
+# log into docker with the account credentials  
 sudo docker login 
 
 

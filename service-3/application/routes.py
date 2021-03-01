@@ -5,6 +5,7 @@ import random
 
 
 
+# Defining a route that will randomly pick a characters Grade via a entry from the given list
 @app.route("/Grade", methods=["GET"])
 def Grade():
     Grade_List = ["Broken", "Rusty", "Shoddy", "Blunt", "Serviceable", "Honed", "Freshy Forged" ,"Eleven Mastercrafted" ,"Dwarven Mastercrafted"]
@@ -12,7 +13,7 @@ def Grade():
     return Response(Grade,mimetype='text/plain')
 
 
-
+# Defining a route that will randomly pick a characters Weapon via a entry from the given list
 @app.route("/Weapon", methods=["GET"])
 def Weapon():
     Weapon_List = ["Barefist", "Dagger", "ShortSword", "LongSword", "Morning star", "Two-Handed GreatSword" , "Two-Handed BattleAxe","Dual-Wield Daggers", 
@@ -23,7 +24,7 @@ def Weapon():
     return Response(Weapon,mimetype='text/plain')
 
 
-
+# Defining a route that will randomly pick a characters Stance via a entry from the given list
 @app.route("/Stance", methods=["GET"])
 def Stance():
     Stance_List = ["Clumsy", "Light-Footed", "Lightning Fast", "Rock Solid", "Immovable", "Veteran Combatant", "Martial Artist", "Cripple"]
@@ -31,7 +32,7 @@ def Stance():
     return Response(Stance,mimetype='text/plain')
 
 
-
+# Defining a route that will randomly pick a characters Trait_1 via a entry from the given list
 @app.route("/Trait_1", methods=["GET"])
 def Trait_1():
     Trait_1_List = ["Odin Force Disease Resist", "Sickly", "Built Different", "Pigeon Chest", "Massive Natural Biceps", "Kleptomaniac",
@@ -40,7 +41,7 @@ def Trait_1():
     return Response(Trait_1,mimetype='text/plain')
 
 
-
+# Defining a route that will randomly pick a characters Trait_2 via a entry from the given list
 @app.route("/Trait_2", methods=["GET"])
 def Trait_2():
     Trait_2_List = ["Orc Hater", "Human Hater", "Elf Hater", "Dwarf Hater", "Goblin Hater", "Hobbit Hater", "Idiot", "Genius", "Fearless", 
@@ -49,7 +50,7 @@ def Trait_2():
     return Response(Trait_2,mimetype='text/plain')
 
 
-
+# Defining a route that will randomly pick a characters Trait_3 via a entry from the given list
 @app.route("/Trait_3", methods=["GET"])
 def Trait_3():
     Trait_3_List = ["Natural Sprinter", "Low Stamina", "Unending Stamina", "Grand-Master Strategist", "Weak", "Stonks", "Paranoid", "Heroic", "Anemic",

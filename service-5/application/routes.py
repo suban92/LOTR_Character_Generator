@@ -5,7 +5,8 @@ import requests
 
 
 
-# Service-3 Object Imports
+# Imports the value of Weapon via post requested from service-1 and the value of Grade from service-3
+# then reassigns the values based of the predefined rules of the below if statements 
 @app.route("/Grade", methods=["GET", "POST"])
 def Grade():
     Weapon = request.data.decode('utf-8')
@@ -33,10 +34,11 @@ def Grade():
 
 
 
-# Service-4 Character Imports
+
+# Imports the value of Profession via post requested from service-1 and the value of Melee_Prowess from service-3
+# then reassigns the values based of the predefined rules of the below if statements
 @app.route("/Melee_Prowess", methods=["GET", "POST"])
 def Melee_Prowess():
-    # Request for the Profession Data to perform if statements to modify Values
     Profession = request.data.decode('utf-8')
     
     Melee_Prowess_Response = requests.get("http://service-4:5003/Melee_Prowess")
@@ -80,7 +82,8 @@ def Melee_Prowess():
     return Response(Melee_Prowess, mimetype="text/plain")
 
 
-
+# Imports the value of Profession via post requested from service-1 and the value of Archery_Prowess from service-3
+# then reassigns the values based of the predefined rules of the below if statements 
 @app.route("/Archery_Prowess", methods=["GET", "POST"])
 def Archery_Prowess():
     Profession = request.data.decode('utf-8')
@@ -127,6 +130,8 @@ def Archery_Prowess():
 
 
 
+# Imports the value of Profession via post requested from service-1 and the value of Strength from service-3
+# then reassigns the values based of the predefined rules of the below if statements 
 @app.route("/Strength", methods=["GET", "POST"])
 def Strength():
     Profession = request.data.decode('utf-8')
@@ -173,6 +178,8 @@ def Strength():
 
 
 
+# Imports the value of Profession via post requested from service-1 and the value of Endurance from service-3
+# then reassigns the values based of the predefined rules of the below if statements 
 @app.route("/Endurance", methods=["GET", "POST"])
 def Endurance():
     Profession = request.data.decode('utf-8')
@@ -219,6 +226,8 @@ def Endurance():
 
 
 
+# Imports the value of Profession via post requested from service-1 and the value of Intelligence from service-3
+# then reassigns the values based of the predefined rules of the below if statements 
 @app.route("/Intelligence", methods=["GET", "POST"])
 def Intelligence():
     Profession = request.data.decode('utf-8')
@@ -265,6 +274,8 @@ def Intelligence():
 
 
 
+# Imports the value of Profession via post requested from service-1 and the value of Awareness from service-3
+# then reassigns the values based of the predefined rules of the below if statements 
 @app.route("/Awareness", methods=["GET", "POST"])
 def Awareness():
     Profession = request.data.decode('utf-8')
@@ -311,6 +322,8 @@ def Awareness():
 
 
 
+# Imports the value of Profession via post requested from service-1 and the value of Dexterity from service-3
+# then reassigns the values based of the predefined rules of the below if statements 
 @app.route("/Dexterity", methods=["GET", "POST"])
 def Dexterity():
     Profession = request.data.decode('utf-8')
@@ -357,6 +370,8 @@ def Dexterity():
 
 
 
+# Imports the value of Profession via post requested from service-1 and the value of Dodge from service-3
+# then reassigns the values based of the predefined rules of the below if statements 
 @app.route("/Dodge", methods=["GET", "POST"])
 def Dodge():
     Profession = request.data.decode('utf-8')

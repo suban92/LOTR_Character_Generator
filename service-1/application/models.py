@@ -1,5 +1,6 @@
 from application import db
 
+# Setting up our db.model that corresponds to an MYSQL database tabel 
 
 class lotr_character(db.Model):
 	# ID and character name

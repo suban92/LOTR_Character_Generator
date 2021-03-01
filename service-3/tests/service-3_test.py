@@ -6,7 +6,7 @@ from flask_testing import TestCase
 import requests
 
 
-
+# Setting up our parent test class which is itself a child of another class (TestCase)
 class TestBase(TestCase):
     def create_app(self):
         return app
