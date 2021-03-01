@@ -3,27 +3,35 @@ pipeline {
     stages{
         stage("Test-Application"){
             steps{
-                sh './scripts/test-application.sh'
+                sh './jenkins/test-application.sh'
             }
         }
+        
+        
         stage("Ansible"){
             steps{
-                sh './scripts/ansible.sh'
+                sh './jenkins/ansible.sh'
             }
         }
+        
+        
         stage("Build-Images"){
             steps{
-                sh './scripts/build-images.sh'
+                sh './jenkins/build-images.sh'
             }
         }
+        
+        
         stage("Deploy-Services"){
             steps{
-                sh './scripts/deploy-services.sh'
+                sh './jenkins/deploy-services.sh'
             }
         }                   
+        
+        
         stage('Nginx'){
             steps{
-                sh './scripts/nginx.sh'
+                sh './jenkins/nginx.sh'
             }
         }
     }

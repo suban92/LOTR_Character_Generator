@@ -12,6 +12,9 @@ cd LOTR_Character_Generator
 
 git checkout Jenkins 
 
+
+sudo docker login
+ 
  
 sudo docker stack deploy --compose-file docker-compose.yaml lotr
 EOF
